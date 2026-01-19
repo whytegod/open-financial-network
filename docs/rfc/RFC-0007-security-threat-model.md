@@ -1,64 +1,63 @@
 # RFC-0007: Security Model & Threat Mitigation
 
-- **RFC ID:** 0007
-- **Title:** Security Architecture and Threat Model
-- **Status:** Draft
-- **Author:** Whytegod
-- **Created:** 2026-01-19
+- RFC ID: 0007
+- Status: Draft
+- Author: OFN Core Contributors
+- Created: 2026-01-19
 
 ---
 
-## Summary
+## 1. Summary
 
 This RFC defines the security assumptions, threat model, and mitigation strategies for the Open Financial Network (OFN).
 
 ---
 
-## Security Philosophy
+## 2. Security Philosophy
 
-OFN security is based on:
+OFN security is designed around:
 - Explicit trust boundaries
 - Minimal assumptions
-- Defense in depth
+- Defense-in-depth
 - Fail-safe defaults
 
-Security is designed, not assumed.
+Security is intentional and auditable, not implicit.
 
 ---
 
-## Trust Model
+## 3. Trust Model
 
 OFN assumes:
-- Byzantine participants
-- Malicious integrators
+- Byzantine and malicious participants
 - Untrusted networks
 - Honest-but-curious observers
+- Potentially compromised endpoints
 
-No participant is inherently trusted.
+No participant or component is inherently trusted.
 
 ---
 
-## Threat Categories
+## 4. Threat Categories
 
-### Network-Level Threats
+### 4.1 Network-Level Threats
 - Message interception
 - Replay attacks
 - Denial-of-service
 - Network partitioning
 
-### Protocol-Level Threats
+### 4.2 Protocol-Level Threats
 - Double execution
-- State desynchronization
+- State inconsistency
 - Transaction ordering manipulation
 - Consensus abuse
 
-### Identity-Level Threats
-- Credential forgery
+### 4.3 Identity-Level Threats
+- Key compromise
 - Sybil attacks
 - Identity correlation
-- Key compromise
+- Credential forgery
 
-### Asset-Level Threats
+### 4.4 Asset-Level Threats
 - Unauthorized minting
 - Supply manipulation
 - Asset spoofing
@@ -66,56 +65,56 @@ No participant is inherently trusted.
 
 ---
 
-## Mitigation Strategies
+## 5. Mitigation Strategies
 
 Mitigations MAY include:
 - Cryptographic signatures
 - Nonce and sequence enforcement
+- Deterministic execution
 - Rate limiting
-- Economic disincentives
-- Audit trails
-- Slashing or exclusion mechanisms
+- Economic deterrence
+- Comprehensive audit trails
 
-Implementations MUST document applied mitigations.
+All implementations MUST document applied mitigations.
 
 ---
 
-## Key Management
+## 6. Key Management
 
 Participants are responsible for:
 - Secure key storage
-- Rotation policies
+- Key rotation
 - Revocation handling
 
-OFN does not recover lost keys.
+OFN does not recover lost or compromised keys.
 
 ---
 
-## Failure Modes
+## 7. Failure Modes
 
 OFN prioritizes:
 - Graceful degradation
-- Partial failure isolation
+- Isolation of partial failures
 - Deterministic recovery
-- Explicit error states
+- Explicit error signaling
 
 Silent failure is unacceptable.
 
 ---
 
-## Incident Response
+## 8. Incident Response
 
 Implementations SHOULD support:
 - Event logging
 - Forensic analysis
-- Replay simulation
-- Coordinated disclosure
+- Coordinated vulnerability disclosure
+- Replay and simulation tooling
 
 ---
 
-## Security Boundaries
+## 9. Security Boundaries
 
-OFN security applies to:
+OFN security guarantees apply to:
 - Protocol correctness
 - Message integrity
 - State consistency
@@ -124,157 +123,14 @@ Application-layer security is out of scope.
 
 ---
 
-## Future Work
+## 10. Future Work
 
 - Formal verification RFC
-- Bug bounty framework RFC
 - Security audit standards RFC
+- Bug bounty framework RFC
 
 ---
 
-## Design Principles
+## 11. Conclusion
 
-## Design Principles
-
-The economic model of OFN is designed to support long-term financial infrastructure rather than short-term speculative activity.
-
-The following principles guide all economic decisions within the network:
-
-- **Infrastructure First**  
-  OFN economics prioritize reliability, predictability, and continuity over rapid growth or user extraction.
-
-- **Cost-Based Participation**  
-  Fees reflect real operational and governance costs rather than artificial scarcity or profit maximization.
-
-- **Neutrality**  
-  The network does not privilege specific assets, issuers, jurisdictions, or participants through economic mechanisms.
-
-- **Abuse Resistance**  
-  All economic activity must impose a non-zero cost to prevent spam, denial-of-service attacks, and regulatory evasion.
-
-- **Regulatory Compatibility**  
-  The economic model avoids implicit yield promises, passive income expectations, or profit-sharing constructs that could reclassify the network as a financial product.
-
-- **Governance Accountability**  
-  Economic parameters are adjustable only through transparent governance processes defined in RFC-0005.
-
-## Economic Roles
-
-## Economic Roles
-
-OFN defines clear economic roles to ensure accountability, sustainability, and separation of responsibilities.
-
-### Network Participants
-End users and institutions that submit transactions, hold assets, or interact with OFN-based services.  
-Participants pay usage-based fees corresponding to network resource consumption.
-
-### Validators / Operators
-Entities responsible for transaction validation, ordering, and network availability.  
-Validators incur operational costs and are compensated through protocol-defined fees rather than speculative rewards.
-
-### Asset Issuers
-Authorized entities that issue, manage, or redeem assets on OFN.  
-Issuers pay issuance and lifecycle fees reflecting compliance, registry, and governance overhead.
-
-### Governance Actors
-Participants involved in proposing, reviewing, and approving changes to OFN parameters.  
-Governance participation is designed to be responsibility-driven rather than financially extractive.
-
-
-## Fee Model
-
-
-## Fee Model
-
-OFN employs a transparent, cost-based fee model intended to recover operational expenses, fund governance activities, and maintain long-term network sustainability.
-
-Fees are not designed to generate profit or yield, but to ensure fair and predictable access to shared financial infrastructure.
-
-### Transaction Fees
-Transaction fees are assessed based on objective resource usage, including but not limited to:
-- Transaction size and complexity
-- Validation and execution costs
-- State storage impact
-
-Transaction fees apply uniformly across all participants and asset types, preserving network neutrality.
-
-### Asset Issuance Fees
-Asset issuance fees apply to the creation and lifecycle management of assets on OFN, including:
-- Asset registration
-- Metadata updates
-- Compliance and registry maintenance
-
-These fees reflect administrative and governance overhead associated with maintaining a trusted asset environment.
-
-### Governance & Administrative Fees
-Governance-related actions that impose measurable network or administrative costs may incur fees, including:
-- Proposal submission
-- Parameter adjustment processes
-- Registry or directory maintenance
-
-Such fees are intended to prevent abuse and ensure responsible governance participation
-
-
-
-
-## Incentives
-
-
-## Incentives
-
-OFN does not provide financial incentives for asset holding, speculation, or passive participation.
-
-Instead, the network compensates participants for objectively verifiable services that contribute to network operation, security, and governance.
-
-### Service-Based Compensation
-Participants may receive compensation for providing measurable services, including:
-- Transaction validation and execution
-- Compliance verification and reporting
-- Infrastructure operation and uptime
-- Governance facilitation and administrative services
-
-Compensation is calculated based on service contribution metrics and operational cost recovery models, not token ownership or market activity.
-
-### Neutral Participation
-All compensation mechanisms are designed to:
-- Avoid preferential treatment
-- Prevent rent-seeking behavior
-- Maintain neutrality across participants
-
-No compensation is guaranteed, and participation does not imply entitlement to future payments.
-
-
-## Risks and Limitations
-
-## Risks and Limitations
-
-OFN is an evolving financial infrastructure project and is subject to technical, operational, regulatory, and governance risks.
-
-Participation in OFN does not guarantee:
-- Network availability or uptime
-- Economic benefit or cost recovery
-- Regulatory acceptance in all jurisdictions
-- Compatibility with external systems
-
-### Regulatory Considerations
-Regulatory treatment of distributed financial infrastructure varies by jurisdiction and may change over time.
-
-Participants are solely responsible for ensuring their use of OFN complies with applicable laws, regulations, and reporting requirements.
-
-OFN does not provide legal, tax, or investment advice.
-
-### Operational Limitations
-Network performance, fee structures, and governance processes may be adjusted over time in response to operational requirements, security considerations, or regulatory developments.
-
-Backward compatibility is not guaranteed, and participants assume the risk of protocol evolution.
-
-
-
-
-
-
-
-
-## Conclusion
-
-This RFC establishes a clear, auditable security posture for OFN and provides a foundation for secure implementations across environments.
+This RFC establishes a clear and auditable security posture for OFN implementations across environments.
