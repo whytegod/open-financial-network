@@ -1,3 +1,12 @@
+## Project Structure
+
+This repository is organized into clear layers to preserve the neutrality
+and long-term integrity of the OFN protocol.
+
+- Core concepts and principles are defined in documentation.
+- Reference materials explain how OFN may be implemented.
+- Source code represents experimental or optional implementations
+  and does not redefine the OFN Core.
 ## Scope and Non-Goals
 
 ### In Scope
