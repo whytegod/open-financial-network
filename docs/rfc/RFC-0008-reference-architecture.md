@@ -1,132 +1,150 @@
-# RFC-0008: Reference Architecture & Node Types
+# RFC-0008: Economic Model & Incentives
 
-- **RFC ID:** 0008
-- **Title:** Reference Architecture and Node Classification
-- **Status:** Draft
-- **Author:** Whytegod
-- **Created:** 2026-01-19
-
----
-
-## Summary
-
-This RFC defines the reference architecture of the Open Financial Network (OFN) and categorizes the node types that participate in the network.
+- RFC ID: 0008
+- Status: Draft
+- Author: OFN Core Contributors
+- Created: 2026-01-19
 
 ---
 
-## Architectural Overview
+## 1. Overview
 
-OFN is a modular, layered financial protocol composed of interoperable components rather than a monolithic system.
+This RFC defines the economic model of the Open Financial Network (OFN), including fee mechanisms, service-based compensation, sustainability principles, and anti-abuse economics.
 
-Core layers include:
-- Networking layer
-- Identity layer
-- Transaction execution layer
-- Asset registry layer
-- Governance layer
-- Compliance interface layer
-
-Each layer MAY be implemented independently.
+OFN economics are designed for financial infrastructure, not speculative markets.
 
 ---
 
-## Node Types
+## 2. Design Principles
 
-### Validator Nodes
-- Maintain protocol state
-- Validate transactions
-- Enforce consensus rules
-- Participate in governance execution
+The economic model follows these principles:
 
-Validator nodes MUST meet minimum performance and security requirements.
+- Infrastructure-first sustainability
+- Cost-based participation
+- Neutrality across participants
+- Abuse resistance
+- Regulatory compatibility
+- Governance accountability
 
----
-
-### Gateway Nodes
-- Interface with external systems
-- Handle API access
-- Translate off-chain events to on-chain messages
-
-Gateway nodes SHOULD be rate-limited and auditable.
+OFN does not promise yield, profit, or passive income.
 
 ---
 
-### Observer Nodes
-- Read-only access
-- State indexing
-- Analytics and monitoring
+## 3. Economic Roles
 
-Observer nodes do not participate in consensus.
+### Network Participants
+Users and institutions that submit transactions or interact with OFN services.  
+Participants pay usage-based fees proportional to consumed resources.
 
----
+### Validators / Operators
+Entities responsible for validation and network availability.  
+They are compensated for operational services, not rewarded for speculation.
 
-### Issuer Nodes
-- Authorized to create assets
-- Maintain issuance policies
-- Subject to compliance constraints
+### Asset Issuers
+Entities that create and manage assets.  
+Issuers pay lifecycle and registry fees reflecting administrative overhead.
 
-Issuer nodes MAY also act as gateway nodes.
-
----
-
-### Client Nodes
-- End-user wallets
-- Application clients
-- Smart device integrations
-
-Client nodes do not hold global state.
+### Governance Actors
+Participants involved in protocol decision-making.  
+Governance participation is responsibility-driven, not extractive.
 
 ---
 
-## Communication Model
+## 4. Fee Model
 
-Nodes communicate via:
-- Signed messages
-- Deterministic serialization
-- Versioned protocol schemas
+OFN applies transparent, cost-based fees to recover operational and governance expenses.
 
-All messages MUST be verifiable.
+### Transaction Fees
+Assessed based on:
+- Transaction size and complexity
+- Execution and validation cost
+- State storage impact
 
----
+### Asset Issuance Fees
+Apply to:
+- Asset creation
+- Metadata updates
+- Registry maintenance
+- Compliance overhead
 
-## Deployment Models
+### Governance & Administrative Fees
+May apply to:
+- Proposal submission
+- Registry management
+- Parameter adjustments
 
-OFN supports:
-- Public networks
-- Consortium networks
-- Private deployments
-- Hybrid configurations
-
----
-
-## Scalability Considerations
-
-Architecture supports:
-- Horizontal scaling
-- Sharded execution
-- Layered settlement
-- Off-chain computation
+Fees are neutral and non-discriminatory.
 
 ---
 
-## Upgrade Strategy
+## 5. Service-Based Compensation
 
-Protocol upgrades MUST:
-- Be backward-aware
-- Use version negotiation
-- Avoid silent breaking changes
+OFN compensates participants for verifiable services such as:
+- Transaction validation
+- Infrastructure operation
+- Compliance processing
+- Governance facilitation
 
----
-
-## Security Considerations
-
-Each node type has:
-- Defined trust assumptions
-- Explicit permissions
-- Limited authority scope
+Compensation is:
+- Cost-recovery based
+- Non-guaranteed
+- Independent of asset holding
 
 ---
 
-## Conclusion
+## 6. Anti-Abuse Economics
 
-This reference architecture provides a flexible yet disciplined framework for implementing OFN across diverse environments.
+OFN employs:
+- Non-zero transaction costs
+- Rate limiting
+- Penalties for misuse
+
+Economic friction exists to prevent spam and denial-of-service abuse.
+
+---
+
+## 7. Monetary Policy
+
+OFN does not mandate a native inflationary asset.
+
+If native units exist:
+- Supply rules MUST be explicit
+- Changes MUST go through governance
+- No implicit yield is allowed
+
+---
+
+## 8. Sustainability & Funding
+
+Network funding MAY support:
+- Infrastructure maintenance
+- Security operations
+- Governance administration
+
+No revenue guarantees are implied.
+
+---
+
+## 9. Governance Interaction
+
+Economic parameters MAY be adjusted via RFC-defined governance processes in RFC-0005.
+
+All changes must be transparent and auditable.
+
+---
+
+## 10. Risks & Limitations
+
+Participation in OFN does not guarantee:
+- Economic benefit
+- Cost recovery
+- Regulatory acceptance
+- Network availability
+
+Participants are responsible for legal and regulatory compliance.
+
+---
+
+## 11. Conclusion
+
+This RFC establishes a safe, neutral, and sustainable economic foundation for OFN.
