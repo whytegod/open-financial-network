@@ -1,70 +1,61 @@
 # Open Financial Network (OFN)
 
-Open Financial Network is an open-source, infrastructure-first financial and crypto network designed for real-world usage, long-term scalability, and institutional-grade security.
+Open Financial Network (OFN) is an open, neutral financial protocol designed to support
+digital value exchange without centralized control.
 
-This project focuses on building core financial primitives instead of hype-driven products.
-
----
-
-## Vision
-
-To create a transparent, open, and secure financial network that can support:
-- Peer-to-peer value transfer
-- Digital asset issuance
-- Open financial protocols
-- Cross-border settlement
-- Regulatory-aware infrastructure
+This repository contains the core documentation and specifications for OFN.
 
 ---
 
-## Design Principles
+## Purpose
 
-- Infrastructure before hype
-- Security before speed
-- Open standards over proprietary systems
-- Documentation-driven development
+OFN exists to:
+- Enable open financial infrastructure
+- Reduce dependency on centralized intermediaries
+- Support transparent, verifiable transactions
+- Remain neutral, open, and extensible
+
+---
+
+## Repository Structure
+
+
+
+
+/docs ├── WHITEPAPER.md   # Vision, goals, economics ├── TECHPAPER.md    # Technical architecture README.md             # Project overview LICENSE               # Open-source license
+
+
+
+---
+
+## Current Status
+
+- Documentation phase
+- No production code yet
+- Open for review and discussion
+
+---
+
+## Principles
+
+- Open by default
+- Security-first design
+- Minimal assumptions
 - Long-term sustainability
 
 ---
 
-## Project Structure
-open-financial-network/ ├── README.md          # Project overview ├── LICENSE            # Open-source license └── docs/ ├── WHITEPAPER.md  # Vision, economics, governance └── TECHPAPER.md   # Technical architecture and protocols
+## Roadmap (High-Level)
 
-
----
-
-## Documentation
-
-- **Whitepaper**: `docs/WHITEPAPER.md`  
-  Explains the purpose, philosophy, economic model, and long-term vision.
-
-- **Techpaper**: `docs/TECHPAPER.md`  
-  Describes system architecture, networking, consensus concepts, and security assumptions.
-
----
-
-## Development Status
-
-🚧 Early-stage design and documentation phase  
-No production code has been released yet.
-
-This repository will evolve from:
-Documentation → Specifications → Reference Implementation → Network
-
----
-
-## Contribution Philosophy
-
-This project values:
-- Thoughtful design
-- Peer review
-- Clear documentation
-- Security-first thinking
-
-Code contributions will be accepted once core specifications are finalized.
+1. Specification freeze
+2. Peer review
+3. Reference implementation
+4. Test network
+5. Main network
 
 ---
 
 ## License
 
-This project is released under the terms defined in the `LICENSE` file.
+This project is released under the terms of the included LICENSE file.
+
