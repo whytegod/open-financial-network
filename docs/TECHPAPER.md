@@ -1,3 +1,38 @@
+# OFN Technical Paper
+
+## Design Philosophy
+
+OFN is built as a protocol-first financial network emphasizing correctness, determinism, and long-term stability.
+
+The system prioritizes:
+- Explicit state transitions
+- Verifiable peer behavior
+- Minimal trusted assumptions
+- Gradual extensibility
+
+No component is designed for speculative acceleration or social engagement incentives.
+
+---
+
+## System Overview
+
+OFN operates as a peer-to-peer network where nodes maintain a shared, verifiable state.
+
+Core properties:
+- Nodes validate state locally
+- Consensus emerges from protocol rules
+- No central coordinator
+- Deterministic execution
+
+---
+
+## Network Assumptions
+
+- Nodes may join or leave at any time
+- The network may experience latency or partial partitions
+- Some peers may behave maliciously
+
+The protocol assumes honest majority participation at the rule level, not identity level.
 # Open Financial Network (OFN) – Technical Paper
 
 ## 1. Overview
