@@ -1,10 +1,10 @@
-# Open Financial Network (OFN) – Whitepaper
+# Open Financial Network (OFN) 
 
 ## Abstract
 
-Open Financial Network (OFN) is an open, decentralized financial infrastructure designed to support secure value exchange, digital asset issuance, and interoperable financial services without dependence on closed institutions.
+Open Financial Network (OFN) is an open, decentralized financial infrastructure designed to support secure value exchange, digital asset issuance, and interoperable financial services across diverse institutional and non-institutional environments.
 
-OFN prioritizes transparency, security, and long-term scalability over short-term speculation.
+OFN prioritizes transparency, security, and long-term scalability over short-term speculation, while remaining neutral to jurisdiction, asset type, and participant class.
 
 ---
 
