@@ -1,33 +1,84 @@
 # Open Financial Network (OFN) – Whitepaper
 
-## 1. Introduction
-Open Financial Network (OFN) is an open, secure, and infrastructure-focused financial and crypto network designed for real-world use, institutional safety, and long-term scalability.
+## Abstract
 
-## 2. Problem Statement
-Current financial and crypto systems suffer from:
-- Centralized control
-- Poor transparency
-- Weak security models
-- Limited real-world interoperability
+Open Financial Network (OFN) is an open, decentralized financial infrastructure designed to support secure value exchange, digital asset issuance, and interoperable financial services without dependence on closed institutions.
 
-## 3. Vision
-OFN aims to provide a neutral, open financial layer that supports:
-- Peer-to-peer value transfer
-- Institutional-grade security
+OFN prioritizes transparency, security, and long-term scalability over short-term speculation.
+
+---
+
+## Problem Statement
+
+Modern financial systems suffer from:
+- Centralized control and opaque decision-making
+- Limited access across borders
+- High transaction costs
+- Fragile trust models
+- Regulatory incompatibility with open systems
+
+Existing blockchain solutions often optimize for speculation rather than real financial utility.
+
+---
+
+## Proposed Solution
+
+OFN proposes an open financial network that:
+- Uses modular architecture
+- Separates infrastructure from applications
+- Supports peer-to-peer value transfer
+- Allows regulated and unregulated participants to coexist
+- Is built with compliance-awareness, not avoidance
+
+---
+
+## Core Principles
+
+- Open participation
 - Transparent governance
-- Cross-border interoperability
+- Security-first design
+- Neutral infrastructure
+- Gradual decentralization
 
-## 4. Core Principles
-- Security first
-- Open standards
-- Network neutrality
-- Permissionless participation
+---
 
-## 5. Use Cases
-- Open payments
-- Asset settlement
-- Decentralized finance infrastructure
-- Cross-border remittance
+## Economic Model (High-Level)
 
-## 6. Conclusion
-OFN is built to serve as a long-term financial backbone, not a speculative experiment.
+OFN does not prioritize inflationary token mechanics.
+
+Economic activity is driven by:
+- Transaction fees
+- Infrastructure participation incentives
+- Optional asset issuance layers
+- Service-level usage
+
+Exact parameters are intentionally conservative and will evolve through peer review.
+
+---
+
+## Governance
+
+OFN governance is:
+- Proposal-driven
+- Documentation-first
+- Transparent and auditable
+
+No single entity controls protocol evolution.
+
+---
+
+## Roadmap (Conceptual)
+
+1. Specification & documentation
+2. Reference implementation
+3. Test network
+4. Security review
+5. Gradual public adoption
+
+---
+
+## Conclusion
+
+OFN aims to become a durable financial infrastructure layer rather than a speculative product.
+
+Sustainability, trust, and openness are prioritized above speed and hype.
