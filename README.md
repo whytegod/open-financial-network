@@ -76,3 +76,19 @@ OFN exists to:
 
 This project is released under the terms of the included LICENSE file.
 
+## Threat Model (High-Level)
+
+The OFN protocol assumes a partially adversarial environment.
+
+### Considered Threats
+- Malicious peers attempting double-spend or replay attacks
+- Sybil attacks through fake node identities
+- Network partition or temporary censorship
+- Data integrity corruption
+
+### Non-Goals in Threat Handling
+- State-level adversaries
+- Physical attacks on infrastructure
+- Guaranteed anonymity at all layers
+
+The protocol prioritizes resilience, graceful degradation, and recoverability over absolute guarantees.
