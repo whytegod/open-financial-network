@@ -92,3 +92,77 @@ The OFN protocol assumes a partially adversarial environment.
 - Guaranteed anonymity at all layers
 
 The protocol prioritizes resilience, graceful degradation, and recoverability over absolute guarantees.
+
+
+
+# Open Financial Network (OFN)
+
+Open Financial Network (OFN) is an open, modular financial protocol focused on
+access, interoperability, and security-first design.
+
+This repository contains the **core documentation, design decisions, and RFCs**
+that define the network before full implementation.
+
+---
+
+## 📄 Documentation
+
+All core documents are located in the `docs/` directory.
+
+### Core Papers
+- **Whitepaper**: `docs/rfc/WHITEPAPER.md`  
+  High-level vision, purpose, and economic intent.
+
+- **Techpaper**: `docs/rfc/TECHPAPER.md`  
+  Technical architecture and system design.
+
+- **Threat Model**: `docs/rfc/THREAT-MODEL.md`  
+  Security assumptions, risks, and mitigations.
+
+---
+
+## 📘 RFCs (Request for Comments)
+
+RFCs describe proposed standards and decisions for the network.
+
+Located in: `docs/rfc/`
+
+- **RFC-0001** – Initial Architecture & Principles  
+- **RFC-0002** – Network Roles & Responsibilities  
+
+RFCs are immutable once accepted.
+
+---
+
+## 🧱 Project Status
+
+- Documentation-first ✅  
+- Architecture defined ✅  
+- Security model defined ✅  
+- Reference implementation: **pending**
+
+This project intentionally freezes design before scaling or deployment.
+
+---
+
+## ⚖️ License
+
+This project is released under the included `LICENSE` file.
+
+---
+
+## 🤝 Contributing
+
+At this stage, contributions are limited to:
+- RFC discussion
+- Documentation review
+- Security feedback
+
+Implementation contributions will open later.
+
+---
+
+## 📌 Disclaimer
+
+This repository does **not** contain production-ready financial software.
+It is a design and research project.
