@@ -1,64 +1,136 @@
-# Open Financial Network – Technical Paper
+# Open Financial Network (OFN) – Technical Paper
 
 ## 1. Overview
-The Open Financial Network (OFN) is a modular, open financial and cryptographic infrastructure designed to support secure value transfer, programmable finance, and institutional-grade settlement without reliance on centralized intermediaries.
 
-This technical paper describes the system architecture, core components, network design, and security assumptions.
+This document defines the technical architecture of the Open Financial Network (OFN).
+It focuses on system design, peer interaction, security assumptions, and scalability strategies.
 
----
-
-## 2. Design Principles
-- Open and permissionless participation
-- Strong cryptographic security
-- Modular and extensible architecture
-- Scalability without sacrificing decentralization
-- Regulatory-aware but non-custodial design
+This is a specification document, not an implementation.
 
 ---
 
-## 3. Network Architecture
-OFN is composed of independent peer nodes forming a decentralized network. Nodes communicate using authenticated peer-to-peer channels and maintain a shared state through consensus mechanisms.
+## 2. Network Architecture
 
-Core layers:
-- Network Layer (P2P communication)
-- Consensus Layer
-- Execution Layer
-- Data & State Layer
+OFN is a peer-to-peer network composed of independent nodes.
 
----
+Node types:
+- Full nodes (state validation)
+- Relay nodes (network propagation)
+- Client nodes (wallets, applications)
 
-## 4. Consensus Model
-The network supports a pluggable consensus framework, allowing evolution from early-stage Byzantine Fault Tolerant mechanisms toward more scalable hybrid or proof-based systems as the network matures.
+The network is permissionless at the protocol layer.
 
 ---
 
-## 5. Security Model
-Security is enforced through:
-- Cryptographic identity
-- Message authentication
-- State verification
-- Deterministic execution
+## 3. State Model
 
-Threats such as double-spending, state corruption, and network partitioning are mitigated through protocol-level guarantees.
+OFN maintains a global replicated state.
+
+State includes:
+- Account balances
+- Asset ownership
+- Transaction history references
+- Network parameters
+
+State transitions are deterministic and verifiable.
 
 ---
 
-## 6. Scalability
-OFN is designed to scale horizontally through:
-- Stateless validation
+## 4. Consensus (Abstract)
+
+OFN does not lock itself into a single consensus algorithm at inception.
+
+Design goals:
+- Byzantine fault tolerance
+- Finality guarantees
+- Low coordination overhead
+
+Consensus is abstracted to allow future upgrades without state resets.
+
+---
+
+## 5. Peer Discovery & Communication
+
+Peers discover each other via:
+- Bootstrap nodes
+- Gossip-based peer exchange
+
+Communication is:
+- Encrypted
+- Authenticated
+- Rate-limited
+
+No peer is trusted by default.
+
+---
+
+## 6. Transaction Lifecycle
+
+1. Transaction created by client
+2. Signed locally
+3. Broadcast to peers
+4. Validated against current state
+5. Included in state transition
+6. Finalized via consensus
+
+Invalid transactions are rejected deterministically.
+
+---
+
+## 7. Security Model
+
+Threats considered:
+- Sybil attacks
+- Double spending
+- Network partitioning
+- State corruption
+- Denial-of-service
+
+Mitigations include:
+- Economic costs
+- Rate limits
+- Validation rules
+- Peer diversity
+- Conservative defaults
+
+---
+
+## 8. Scalability Strategy
+
+OFN prioritizes correctness over throughput.
+
+Scaling approaches:
+- Efficient state representation
+- Parallel verification
 - Layered execution
-- Future support for sharding or rollups
+- Optional off-chain computation
+
+No unsafe sharding assumptions are introduced early.
 
 ---
 
-## 7. Roadmap (Technical)
-- Phase 1: Documentation & specification
-- Phase 2: Reference implementation
-- Phase 3: Testnet deployment
-- Phase 4: Security audits
-- Phase 5: Mainnet release
+## 9. Upgrade & Freeze Policy
+
+Protocol changes require:
+- Documentation
+- Public review
+- Versioning
+- Grace periods
+
+Critical components may be frozen to preserve trust.
 
 ---
 
-## 8. Conclusion
-This technical paper serves as a living document and will evolve alongside the Open Financial Network implementation.
+## 10. Implementation Philosophy
+
+- Specification before code
+- Security before performance
+- Clarity before complexity
+- Evolution over rigidity
+
+---
+
+## 11. Conclusion
+
+OFN is designed as a long-lived financial protocol.
+Its architecture favors safety, openness, and adaptability.
