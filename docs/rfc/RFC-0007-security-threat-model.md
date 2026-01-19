@@ -212,7 +212,62 @@ Governance-related actions that impose measurable network or administrative cost
 - Parameter adjustment processes
 - Registry or directory maintenance
 
-Such fees are intended to prevent abuse and ensure responsible governance participation.
+Such fees are intended to prevent abuse and ensure responsible governance participation
+
+
+
+
+## Incentives
+
+
+## Incentives
+
+OFN does not provide financial incentives for asset holding, speculation, or passive participation.
+
+Instead, the network compensates participants for objectively verifiable services that contribute to network operation, security, and governance.
+
+### Service-Based Compensation
+Participants may receive compensation for providing measurable services, including:
+- Transaction validation and execution
+- Compliance verification and reporting
+- Infrastructure operation and uptime
+- Governance facilitation and administrative services
+
+Compensation is calculated based on service contribution metrics and operational cost recovery models, not token ownership or market activity.
+
+### Neutral Participation
+All compensation mechanisms are designed to:
+- Avoid preferential treatment
+- Prevent rent-seeking behavior
+- Maintain neutrality across participants
+
+No compensation is guaranteed, and participation does not imply entitlement to future payments.
+
+
+## Risks and Limitations
+
+## Risks and Limitations
+
+OFN is an evolving financial infrastructure project and is subject to technical, operational, regulatory, and governance risks.
+
+Participation in OFN does not guarantee:
+- Network availability or uptime
+- Economic benefit or cost recovery
+- Regulatory acceptance in all jurisdictions
+- Compatibility with external systems
+
+### Regulatory Considerations
+Regulatory treatment of distributed financial infrastructure varies by jurisdiction and may change over time.
+
+Participants are solely responsible for ensuring their use of OFN complies with applicable laws, regulations, and reporting requirements.
+
+OFN does not provide legal, tax, or investment advice.
+
+### Operational Limitations
+Network performance, fee structures, and governance processes may be adjusted over time in response to operational requirements, security considerations, or regulatory developments.
+
+Backward compatibility is not guaranteed, and participants assume the risk of protocol evolution.
+
 
 
 
