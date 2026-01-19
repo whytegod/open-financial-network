@@ -1,171 +1,116 @@
-# OFN Technical Paper
+## Protocol Architecture Overview
 
-## Design Philosophy
+The Open Financial Network (OFN) is a modular, layered financial infrastructure protocol designed to support secure value exchange, asset issuance, and interoperable financial operations across heterogeneous environments.
 
-OFN is built as a protocol-first financial network emphasizing correctness, determinism, and long-term stability.
+OFN is intentionally designed as infrastructure rather than a product, marketplace, or investment vehicle. The protocol prioritizes correctness, neutrality, and long-term sustainability over short-term optimization or speculative activity.
 
-The system prioritizes:
-- Explicit state transitions
-- Verifiable peer behavior
-- Minimal trusted assumptions
-- Gradual extensibility
+### Core Architectural Principles
 
-No component is designed for speculative acceleration or social engagement incentives.
+OFN follows these architectural principles:
 
----
+- Separation of concerns between protocol layers
+- Explicit trust and authority boundaries
+- Intent-based transaction execution
+- Optional and modular compliance integration
+- Governance-driven evolution
+- Defense-in-depth security posture
 
-## System Overview
-
-OFN operates as a peer-to-peer network where nodes maintain a shared, verifiable state.
-
-Core properties:
-- Nodes validate state locally
-- Consensus emerges from protocol rules
-- No central coordinator
-- Deterministic execution
+No single layer assumes trust in another layer by default.
 
 ---
 
-## Network Assumptions
+### Identity & Account Abstraction
 
-- Nodes may join or leave at any time
-- The network may experience latency or partial partitions
-- Some peers may behave maliciously
+OFN employs an abstract identity model that decouples participation from traditional accounts or custodial structures.
 
-The protocol assumes honest majority participation at the rule level, not identity level.
-# Open Financial Network (OFN) – Technical Paper
+Identities may represent individuals, organizations, devices, or automated agents. Account logic is programmable and supports key rotation, recovery mechanisms, and scoped permissions.
 
-## 1. Overview
-
-This document defines the technical architecture of the Open Financial Network (OFN).
-It focuses on system design, peer interaction, security assumptions, and scalability strategies.
-
-This is a specification document, not an implementation.
+Identity credentials and compliance attestations are optional and layered, enabling participants with differing regulatory requirements to coexist without imposing global constraints.
 
 ---
 
-## 2. Network Architecture
+### Transaction & Settlement Model
 
-OFN is a peer-to-peer network composed of independent nodes.
+OFN transactions are intent-based rather than instruction-based.
 
-Node types:
-- Full nodes (state validation)
-- Relay nodes (network propagation)
-- Client nodes (wallets, applications)
+A transaction expresses the desired outcome of a value transfer, while execution logic enforces validation, policy checks, and settlement conditions.
 
-The network is permissionless at the protocol layer.
+Settlement may be:
+- Immediate
+- Delayed
+- Conditional
+- Jurisdiction-aware
 
----
-
-## 3. State Model
-
-OFN maintains a global replicated state.
-
-State includes:
-- Account balances
-- Asset ownership
-- Transaction history references
-- Network parameters
-
-State transitions are deterministic and verifiable.
+Finality guarantees are defined per execution environment and asset type.
 
 ---
 
-## 4. Consensus (Abstract)
+### Asset Issuance & Lifecycle Management
 
-OFN does not lock itself into a single consensus algorithm at inception.
+Assets within OFN are protocol-native abstractions defined by:
+- Issuer identity
+- Supply rules
+- Transfer constraints
+- Lifecycle events
 
-Design goals:
-- Byzantine fault tolerance
-- Finality guarantees
-- Low coordination overhead
+OFN supports fungible, non-fungible, and hybrid asset models, including fractional and condition-bound representations.
 
-Consensus is abstracted to allow future upgrades without state resets.
-
----
-
-## 5. Peer Discovery & Communication
-
-Peers discover each other via:
-- Bootstrap nodes
-- Gossip-based peer exchange
-
-Communication is:
-- Encrypted
-- Authenticated
-- Rate-limited
-
-No peer is trusted by default.
+Asset guarantees, legal enforceability, and external redemption rights are defined outside the core protocol and are the responsibility of issuers and integrators.
 
 ---
 
-## 6. Transaction Lifecycle
+### Economic Model
 
-1. Transaction created by client
-2. Signed locally
-3. Broadcast to peers
-4. Validated against current state
-5. Included in state transition
-6. Finalized via consensus
+OFN employs a cost-based economic model designed for operational sustainability rather than speculative incentives.
 
-Invalid transactions are rejected deterministically.
+Economic activity includes:
+- Usage-based transaction fees
+- Asset issuance and lifecycle fees
+- Service-based compensation for infrastructure operation
 
----
-
-## 7. Security Model
-
-Threats considered:
-- Sybil attacks
-- Double spending
-- Network partitioning
-- State corruption
-- Denial-of-service
-
-Mitigations include:
-- Economic costs
-- Rate limits
-- Validation rules
-- Peer diversity
-- Conservative defaults
+OFN does not guarantee economic benefit, yield, or profit. Economic parameters evolve conservatively through governance processes.
 
 ---
 
-## 8. Scalability Strategy
+### Security Model
 
-OFN prioritizes correctness over throughput.
+OFN security is based on explicit threat modeling, minimal trust assumptions, and deterministic execution.
 
-Scaling approaches:
-- Efficient state representation
-- Parallel verification
-- Layered execution
-- Optional off-chain computation
+The protocol assumes:
+- Malicious participants
+- Untrusted networks
+- Potentially compromised endpoints
 
-No unsafe sharding assumptions are introduced early.
-
----
-
-## 9. Upgrade & Freeze Policy
-
-Protocol changes require:
-- Documentation
-- Public review
-- Versioning
-- Grace periods
-
-Critical components may be frozen to preserve trust.
+Mitigations include cryptographic authentication, replay protection, auditability, and failure isolation. Application-layer security remains the responsibility of implementers.
 
 ---
 
-## 10. Implementation Philosophy
+### Governance & Authority
 
-- Specification before code
-- Security before performance
-- Clarity before complexity
-- Evolution over rigidity
+OFN evolves through documented governance processes.
+
+No single entity unilaterally controls protocol behavior. Authority is distributed across defined roles with explicit permissions and accountability mechanisms.
+
+Protocol upgrades, parameter changes, and role definitions are subject to transparent review and approval.
 
 ---
 
-## 11. Conclusion
+### Interoperability & External Integration
 
-OFN is designed as a long-lived financial protocol.
-Its architecture favors safety, openness, and adaptability.
+OFN interoperates with external systems through gateway mechanisms that preserve protocol sovereignty.
+
+External systems, including blockchains, payment rails, and institutional infrastructure, are treated as untrusted by default.
+
+OFN does not inherit the security, availability, or legal guarantees of integrated systems.
+
+---
+
+### Limitations
+
+OFN does not guarantee:
+- Network availability
+- Regulatory acceptance in all jurisdictions
+- External system reliability
+- Asset enforceability outside the protocol
+
+Participants and integrators assume responsibility for compliance, risk management, and external dependencies.
