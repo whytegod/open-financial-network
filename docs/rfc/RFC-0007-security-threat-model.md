@@ -132,6 +132,32 @@ Application-layer security is out of scope.
 
 ---
 
+## Design Principles
+
+## Design Principles
+
+The economic model of OFN is designed to support long-term financial infrastructure rather than short-term speculative activity.
+
+The following principles guide all economic decisions within the network:
+
+- **Infrastructure First**  
+  OFN economics prioritize reliability, predictability, and continuity over rapid growth or user extraction.
+
+- **Cost-Based Participation**  
+  Fees reflect real operational and governance costs rather than artificial scarcity or profit maximization.
+
+- **Neutrality**  
+  The network does not privilege specific assets, issuers, jurisdictions, or participants through economic mechanisms.
+
+- **Abuse Resistance**  
+  All economic activity must impose a non-zero cost to prevent spam, denial-of-service attacks, and regulatory evasion.
+
+- **Regulatory Compatibility**  
+  The economic model avoids implicit yield promises, passive income expectations, or profit-sharing constructs that could reclassify the network as a financial product.
+
+- **Governance Accountability**  
+  Economic parameters are adjustable only through transparent governance processes defined in RFC-0005.
+
 ## Conclusion
 
 This RFC establishes a clear, auditable security posture for OFN and provides a foundation for secure implementations across environments.
