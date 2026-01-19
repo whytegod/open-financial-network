@@ -21,15 +21,15 @@ Existing blockchain solutions often optimize for speculation rather than real fi
 
 ---
 
+
 ## Proposed Solution
 
 OFN proposes an open financial network that:
-- Uses modular architecture
-- Separates infrastructure from applications
+- Uses a modular and layered architecture
+- Separates core infrastructure from applications and policy layers
 - Supports peer-to-peer value transfer
-- Allows regulated and unregulated participants to coexist
-- Is built with compliance-awareness, not avoidance
-
+- Enables participants with differing regulatory requirements to coexist through optional compliance modules
+- Is built with compliance-awareness rather than compliance avoidance
 ---
 
 ## Core Principles
@@ -44,16 +44,15 @@ OFN proposes an open financial network that:
 
 ## Economic Model (High-Level)
 
-OFN does not prioritize inflationary token mechanics.
+OFN does not prioritize inflationary token mechanics or speculative economic design.
 
-Economic activity is driven by:
-- Transaction fees
-- Infrastructure participation incentives
-- Optional asset issuance layers
-- Service-level usage
+Economic activity is based on:
+- Cost-based transaction fees
+- Service-based compensation for infrastructure operation
+- Optional asset issuance and lifecycle management
+- Usage-driven service interactions
 
-Exact parameters are intentionally conservative and will evolve through peer review.
-
+Exact economic parameters are intentionally conservative and evolve through documented governance processes.
 ---
 
 ## Governance
