@@ -158,6 +158,31 @@ The following principles guide all economic decisions within the network:
 - **Governance Accountability**  
   Economic parameters are adjustable only through transparent governance processes defined in RFC-0005.
 
+## Economic Roles
+
+## Economic Roles
+
+OFN defines clear economic roles to ensure accountability, sustainability, and separation of responsibilities.
+
+### Network Participants
+End users and institutions that submit transactions, hold assets, or interact with OFN-based services.  
+Participants pay usage-based fees corresponding to network resource consumption.
+
+### Validators / Operators
+Entities responsible for transaction validation, ordering, and network availability.  
+Validators incur operational costs and are compensated through protocol-defined fees rather than speculative rewards.
+
+### Asset Issuers
+Authorized entities that issue, manage, or redeem assets on OFN.  
+Issuers pay issuance and lifecycle fees reflecting compliance, registry, and governance overhead.
+
+### Governance Actors
+Participants involved in proposing, reviewing, and approving changes to OFN parameters.  
+Governance participation is designed to be responsibility-driven rather than financially extractive.
+
+
+
+
 ## Conclusion
 
 This RFC establishes a clear, auditable security posture for OFN and provides a foundation for secure implementations across environments.
