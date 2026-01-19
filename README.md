@@ -1,3 +1,20 @@
+## Scope and Non-Goals
+
+### In Scope
+- Core financial infrastructure
+- Peer-to-peer value transfer
+- Protocol-level design
+- Open participation and validation
+- Long-term sustainability
+
+### Out of Scope (For Now)
+- Marketing campaigns
+- Social media hype
+- Influencer promotion
+- Speculative token behavior
+- Short-term profit narratives
+
+OFN is designed as foundational financial infrastructure, not a consumer-facing or hype-driven product.
 # Open Financial Network (OFN)
 
 Open Financial Network (OFN) is an open, neutral financial protocol designed to support
